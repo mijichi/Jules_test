@@ -1,18 +1,41 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
 <head>
-  <title>Tetris</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>タイムカード</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <h1>Tetris</h1>
-  <div id="game-container">
-    <canvas id="tetris-board" width="200" height="400"></canvas>
-    <div id="info">
-      <h2>Score</h2>
-      <p id="score">0</p>
+    <div class="container">
+        <h1>タイムカード</h1>
+        <p>名前を入力して、出勤・退勤をワンクリックで記録できます。</p>
+
+        <div class="time-stamp-section">
+            <h2>打刻</h2>
+            <div class="input-area">
+                <label for="username">ユーザー名</label>
+                <input type="text" id="username" placeholder="やまひろ">
+            </div>
+            <div class="button-area">
+                <button id="clock-in">出勤</button>
+                <button id="clock-out">退勤</button>
+            </div>
+            <p id="message-area"></p>
+        </div>
+
+        <div class="history-section">
+            <div class="history-header">
+                <h2>打刻履歴</h2>
+                <button id="update-history">更新</button>
+            </div>
+            <ul id="history-list">
+            </ul>
+        </div>
     </div>
-  </div>
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>囚人とチェス盤</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>囚人とチェス盤</h1>
+
+    <div>
+        <label for="correct-square">正解のマス (1-64):</label>
+        <input type="number" id="correct-square" min="1" max="64" value="1">
+        <button id="alice-action">アリスのアクション</button>
+    </div>
+
+    <h2>チェス盤の状態</h2>
+    <div id="chessboard"></div>
+
+    <div>
+        <button id="bob-action">ボブのアクション</button>
+        <p>ボブが特定した正解のマス: <span id="bob-guess"></span></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
